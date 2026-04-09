@@ -1,0 +1,11 @@
+export { default as Ticker } from './Sections/Ticker';
+export { default as About } from './Sections/About';
+export { default as Courses } from './Sections/Courses';
+export { default as Teachers } from './Sections/Teachers';
+export { default as Achievers } from './Sections/Achievers';
+export { default as Videos } from './Sections/Videos';
+export { default as Gallery } from './Sections/Gallery';
+export { default as NoticeBoard } from './Sections/NoticeBoard';
+export { default as Testimonials } from './Sections/Testimonials';
+export { default as Contact } from './Sections/Contact';
+export { default as Footer } from './Sections/Footer';
