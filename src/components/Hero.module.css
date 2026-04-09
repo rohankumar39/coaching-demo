@@ -211,6 +211,7 @@
 }
 
 @media (max-width: 1024px) {
+  .hero { flex-direction: column; justify-content: center; }
   .topperTag {
     position: relative;
     left: 0;
