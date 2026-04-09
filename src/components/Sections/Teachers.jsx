@@ -11,7 +11,7 @@ export default function Teachers({ onTeacherClick }) {
           <Reveal delay={80}><h2 className="section-title">Learn From <em>The Best</em></h2></Reveal>
           <Reveal delay={120}><p className="section-desc">IITians, doctors, and UPSC toppers who chose to teach.</p></Reveal>
         </div>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(260px,1fr))',gap:'1.5rem'}}>
+        <div className="grid-cards">
           {teachers.map((t,i) => (
             <Reveal key={t.id} delay={i*50}>
               <div onClick={()=>onTeacherClick(t)} style={{background:'var(--card-bg)',border:'1px solid var(--border)',borderRadius:'var(--radius)',overflow:'hidden',cursor:'pointer',transition:'var(--transition)'}} onMouseEnter={e=>{e.currentTarget.style.transform='translateY(-8px)';e.currentTarget.style.boxShadow='var(--shadow-lg)';e.currentTarget.style.borderColor='rgba(245,166,35,0.3)';e.currentTarget.querySelector('.teacher-overlay').style.opacity='1'}} onMouseLeave={e=>{e.currentTarget.style.transform='';e.currentTarget.style.boxShadow='';e.currentTarget.style.borderColor='var(--border)';e.currentTarget.querySelector('.teacher-overlay').style.opacity='0'}}>

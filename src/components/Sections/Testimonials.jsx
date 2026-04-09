@@ -18,7 +18,7 @@ export default function Testimonials() {
         <div style={{overflow:'hidden',position:'relative'}}>
           <div style={{display:'flex',transition:'transform 0.5s cubic-bezier(0.4,0,0.2,1)',transform:`translateX(-${idx*100}%)`}}>
             {testimonialsData.map((slide,si)=>(
-              <div key={si} style={{minWidth:'100%',display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'1.5rem',padding:'0.5rem'}}>
+              <div key={si} className="grid-3" style={{minWidth:'100%',padding:'0.5rem'}}>
                 {slide.map((t,ti)=>(
                   <div key={ti} style={{background:'var(--card-bg)',border:'1px solid var(--border)',borderRadius:'var(--radius)',padding:'1.5rem',transition:'var(--transition)'}} onMouseEnter={e=>{e.currentTarget.style.transform='translateY(-4px)';e.currentTarget.style.boxShadow='var(--shadow-lg)'}} onMouseLeave={e=>{e.currentTarget.style.transform='';e.currentTarget.style.boxShadow=''}}>
                     <div style={{fontSize:'3rem',color:'var(--accent)',opacity:0.3,lineHeight:1}}>"</div>

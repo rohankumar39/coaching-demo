@@ -37,7 +37,7 @@ export default function Videos({ onVideoClick }) {
             ))}
           </div>
         </Reveal>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(300px,1fr))',gap:'1.5rem'}}>
+        <div className="grid-cards">
           {(videosData[tab]||[]).map((v,i)=>(
             <Reveal key={i} delay={i*60}>
               <div onClick={()=>onVideoClick(v.id)} style={{background:'var(--card-bg)',border:'1px solid var(--border)',borderRadius:'var(--radius)',overflow:'hidden',cursor:'pointer',transition:'var(--transition)'}} onMouseEnter={e=>{e.currentTarget.style.transform='translateY(-4px)';e.currentTarget.style.boxShadow='var(--shadow-lg)'}} onMouseLeave={e=>{e.currentTarget.style.transform='';e.currentTarget.style.boxShadow=''}}>

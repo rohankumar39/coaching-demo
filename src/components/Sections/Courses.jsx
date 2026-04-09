@@ -17,7 +17,7 @@ export default function Courses({ onCourseClick }) {
           <Reveal delay={80}><h2 className="section-title">Courses That <em>Create Toppers</em></h2></Reveal>
           <Reveal delay={120}><p className="section-desc">From foundation to advanced — every course is engineered for rank.</p></Reveal>
         </div>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(300px,1fr))',gap:'1.5rem'}}>
+        <div className="grid-cards">
           {courseList.map((c,i) => (
             <Reveal key={c.key} delay={i*60}>
               <div onClick={()=>onCourseClick(c.key)} style={{background:'var(--card-bg)',border:'1px solid var(--border)',borderRadius:'var(--radius)',padding:'2rem',cursor:'pointer',transition:'var(--transition)',position:'relative',overflow:'hidden'}} onMouseEnter={e=>{e.currentTarget.style.transform='translateY(-6px)';e.currentTarget.style.borderColor='rgba(245,166,35,0.3)';e.currentTarget.style.boxShadow='var(--shadow-lg)'}} onMouseLeave={e=>{e.currentTarget.style.transform='';e.currentTarget.style.borderColor='var(--border)';e.currentTarget.style.boxShadow=''}}>

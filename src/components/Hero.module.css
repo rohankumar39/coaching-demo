@@ -69,7 +69,7 @@
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 10vw, 7rem);
+  font-size: clamp(2.5rem, 8vw, 7rem);
   line-height: 0.9;
   margin-bottom: 1.5rem;
   animation: fadeInUp 0.8s ease both;
@@ -210,11 +210,24 @@
   writing-mode: vertical-rl;
 }
 
+@media (max-width: 1024px) {
+  .topperTag {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 3rem auto 0;
+    justify-content: center;
+    width: max-content;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
-  .hero { align-items: flex-start; padding-top: 120px; }
-  .stats { flex-wrap: wrap; gap: 2rem; }
-  .statItem { gap: 2rem; }
+  .hero { align-items: flex-start; padding-top: 100px; padding-bottom: 4rem; }
+  .stats { flex-direction: column; gap: 2rem; align-items: center; }
+  .statItem { gap: 1.5rem; justify-content: center; }
   .divider { display: none; }
-  .topperTag { left: 1rem; bottom: 1rem; }
   .scrollIndicator { display: none; }
+  .cta { flex-direction: column; width: 100%; }
+  .cta button { width: 100%; justify-content: center; }
 }

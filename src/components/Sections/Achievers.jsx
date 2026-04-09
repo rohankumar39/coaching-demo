@@ -39,7 +39,7 @@ export default function Achievers({ onAchieverClick }) {
             ))}
           </div>
         </Reveal>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))',gap:'1.2rem'}}>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(min(100%, 200px),1fr))',gap:'1.2rem'}}>
           {filtered.map((a,i)=>(
             <Reveal key={a.id} delay={i*40}>
               <div onClick={()=>onAchieverClick(a)} style={{background:'var(--card-bg)',border:`1px solid ${a.rank.includes('1')?'#f5a623':'var(--border)'}`,borderRadius:'var(--radius)',padding:'1.5rem',textAlign:'center',cursor:'pointer',transition:'var(--transition)',position:'relative',overflow:'hidden'}} onMouseEnter={e=>{e.currentTarget.style.transform='translateY(-6px)';e.currentTarget.style.boxShadow='var(--shadow-lg)'}} onMouseLeave={e=>{e.currentTarget.style.transform='';e.currentTarget.style.boxShadow=''}}>

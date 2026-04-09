@@ -228,7 +228,19 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .back-to-top:hover { transform: translateY(-3px) scale(1.1); }
 
 /* ===== RESPONSIVE BASE ===== */
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 1.5rem; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
+.grid-footer { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+
+@media (max-width: 1024px) {
+  .grid-footer { grid-template-columns: 1fr 1fr; }
+}
+
 @media (max-width: 768px) {
   .section { padding: 4rem 0; }
   .container { padding: 0 1rem; }
+  .grid-2, .grid-3, .grid-footer { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
 }

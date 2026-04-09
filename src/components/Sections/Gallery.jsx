@@ -11,7 +11,7 @@ export default function Gallery({ onImageClick }) {
           <Reveal delay={80}><h2 className="section-title">Inside <em>APEX</em></h2></Reveal>
         </div>
         <Reveal>
-          <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gridAutoRows:'200px',gap:'0.8rem'}}>
+          <div className="grid-4" style={{gridAutoRows:'200px'}}>
             {galleryData.map((g,i)=>(
               <div 
                 key={i} 

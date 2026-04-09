@@ -135,13 +135,14 @@
   position: fixed;
   inset: 0;
   background: var(--bg);
+  backdrop-filter: blur(24px);
   z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 2rem;
+  padding: 6rem 2rem 2rem;
   transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
 }
@@ -165,13 +166,17 @@
 @media (max-width: 1024px) {
   .navLinks { display: none; }
   .hamburger { display: flex; }
+  .enrollBtn { display: none; }
   
   .open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
   .open span:nth-child(2) { opacity: 0; }
   .open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
 
-@media (max-width: 480px) {
-  .enrollBtn { display: none; }
-  .mobileMenu .enrollBtn { display: block; }
+@media (max-width: 768px) {
+  .logoApex { font-size: 1.6rem; }
+  .logoSub { font-size: 0.55rem; }
+  .actions { gap: 0.8rem; }
+  .themeBtn { width: 36px; height: 36px; font-size: 1.1rem; }
+  .mobileMenu .enrollBtn { display: block; width: 100%; border-radius: 99px; text-align: center; }
 }

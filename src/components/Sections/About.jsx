@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section className="section about" id="about" style={{background:'var(--bg2)'}}>
       <div className="container">
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'5rem',alignItems:'center'}}>
+        <div className="grid-2" style={{gap:'5rem',alignItems:'center'}}>
           <Reveal>
             <div style={{position:'relative'}}>
               <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" alt="About" style={{width:'100%',borderRadius:'24px',boxShadow:'var(--shadow-lg)',transform:'rotate(-2deg)',transition:'var(--transition-slow)'}} onMouseEnter={e=>e.target.style.transform='rotate(0) scale(1.02)'} onMouseLeave={e=>e.target.style.transform='rotate(-2deg)'} />
@@ -27,7 +27,7 @@ export default function About() {
             <Reveal delay={150}><h2 className="section-title">We Don't Just Teach,<br/><em>We Transform</em></h2></Reveal>
             <Reveal delay={200}><p style={{color:'var(--text2)',lineHeight:1.8,fontSize:'1.05rem',marginBottom:'1.5rem'}}>Founded in 2010, APEX Coaching Institute has been at the forefront of competitive exam preparation. Our pedagogy blends rigorous academics with mentorship, mental fitness, and modern technology to produce toppers consistently.</p></Reveal>
             <Reveal delay={250}>
-              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem',marginBottom:'1.5rem'}}>
+              <div className="grid-2" style={{gap:'1rem',marginBottom:'1.5rem'}}>
                 {[{icon:'🎯',title:'Targeted Curriculum',sub:'Curated by IIT/AIIMS alumni'},{icon:'📊',title:'Performance Analytics',sub:'Weekly reports & AI tracking'},{icon:'🧠',title:'Doubt Sessions Daily',sub:'24/7 online support'},{icon:'🏅',title:'Scholarship Program',sub:'Merit-based fee waiver'}].map(f=>(
                   <div key={f.title} style={{display:'flex',alignItems:'flex-start',gap:'0.8rem',padding:'1rem',background:'var(--surface)',borderRadius:'var(--radius-sm)',border:'1px solid var(--border)',transition:'var(--transition)'}} onMouseEnter={e=>e.currentTarget.style.borderColor='var(--accent)'} onMouseLeave={e=>e.currentTarget.style.borderColor='var(--border)'}>
                     <span style={{fontSize:'1.5rem',flexShrink:0}}>{f.icon}</span>

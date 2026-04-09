@@ -14,7 +14,7 @@ export default function Contact({ showToast }) {
           <Reveal><div className="section-tag">Contact Us</div></Reveal>
           <Reveal delay={80}><h2 className="section-title">Start Your <em>Journey Today</em></h2></Reveal>
         </div>
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1.5fr',gap:'2rem',marginBottom:'2rem'}}>
+        <div className="grid-2" style={{gap:'2rem',marginBottom:'2rem'}}>
           <Reveal>
             <div style={{display:'flex',flexDirection:'column',gap:'1rem'}}>
               {[{icon:'📍',title:'Address',content:'12 Knowledge Park, Civil Lines,\nKanpur, Uttar Pradesh — 208001'},{icon:'📞',title:'Phone',content:'+91 98765 43210\n+91 80000 12345'},{icon:'✉️',title:'Email',content:'info@apexcoaching.in\nadmissions@apexcoaching.in'},{icon:'🕐',title:'Hours',content:'Mon–Sat: 7:00 AM – 9:00 PM\nSunday: 9:00 AM – 2:00 PM'}].map(c=>(
@@ -37,7 +37,7 @@ export default function Contact({ showToast }) {
           <Reveal delay={100}>
             <form onSubmit={handleSubmit} style={{background:'var(--surface)',border:'1px solid var(--border)',borderRadius:'var(--radius)',padding:'2rem'}}>
               <h3 style={{fontSize:'1.3rem',fontWeight:800,marginBottom:'1.5rem'}}>📩 Send an Enquiry</h3>
-              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem',marginBottom:'1rem'}}>
+              <div className="grid-2" style={{gap:'1rem',marginBottom:'1rem'}}>
                 <input type="text" placeholder="Your Name *" required style={{width:'100%',padding:'0.85rem 1rem',background:'var(--surface2)',border:'1px solid var(--border)',borderRadius:'var(--radius-sm)',color:'var(--text)',fontFamily:'var(--font-body)',fontSize:'0.95rem'}} />
                 <input type="tel" placeholder="Phone Number *" required style={{width:'100%',padding:'0.85rem 1rem',background:'var(--surface2)',border:'1px solid var(--border)',borderRadius:'var(--radius-sm)',color:'var(--text)',fontFamily:'var(--font-body)',fontSize:'0.95rem'}} />
               </div>

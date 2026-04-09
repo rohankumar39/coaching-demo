@@ -7,7 +7,7 @@ export default function NoticeBoard() {
   return (
     <section className="section" id="notice" style={{background:'var(--bg2)'}}>
       <div className="container">
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'2rem'}}>
+        <div className="grid-2">
           <Reveal>
             <div style={{background:'var(--surface)',border:'1px solid var(--border)',borderRadius:'var(--radius)',overflow:'hidden'}}>
               <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'1.2rem 1.5rem',background:'var(--bg3)',borderBottom:'1px solid var(--border)'}}>
@@ -30,7 +30,7 @@ export default function NoticeBoard() {
             <Reveal delay={100}>
               <div style={{background:'var(--surface)',border:'1px solid var(--border)',borderRadius:'var(--radius)',overflow:'hidden'}}>
                 <div style={{padding:'1rem 1.5rem',background:'var(--bg3)',borderBottom:'1px solid var(--border)',fontWeight:800,fontSize:'1rem'}}>📢 Announcements & Ads</div>
-                <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0.8rem',padding:'1rem'}}>
+                <div className="grid-2" style={{gap:'0.8rem',padding:'1rem'}}>
                   {adsData.map((a,i)=>(
                     <div key={i} style={{background:'var(--surface2)',borderRadius:'var(--radius-sm)',overflow:'hidden',cursor:'pointer',border:'1px solid var(--border)',transition:'var(--transition)'}} onMouseEnter={e=>{e.currentTarget.style.transform='translateY(-2px)';e.currentTarget.style.boxShadow='var(--shadow)'}} onMouseLeave={e=>{e.currentTarget.style.transform='';e.currentTarget.style.boxShadow=''}}>
                       <img src={a.img} alt="" style={{width:'100%',height:'80px',objectFit:'cover'}} loading="lazy" />

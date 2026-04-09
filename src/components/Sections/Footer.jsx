@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer style={{background:'var(--bg)',borderTop:'1px solid var(--border)',padding:'4rem 0 0'}}>
       <div className="container">
-        <div style={{display:'grid',gridTemplateColumns:'2fr 1fr 1fr 1fr',gap:'3rem',marginBottom:'3rem'}}>
+        <div className="grid-footer">
           <div>
             <div style={{fontFamily:'var(--font-display)',fontSize:'3rem',background:'var(--gradient)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text',lineHeight:1,marginBottom:'1rem'}}>APEX</div>
             <p style={{color:'var(--text2)',fontSize:'0.92rem',lineHeight:1.7,marginBottom:'1.5rem'}}>Shaping India's brightest minds since 2010. Your success is our legacy.</p>
