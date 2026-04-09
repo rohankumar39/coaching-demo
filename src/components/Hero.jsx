@@ -55,7 +55,7 @@ export default function Hero() {
   return (
     <section className={styles.hero} id="home">
       <div className={styles.bg}>
-        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=80" alt="Top Student" className={styles.bgImg} />
+        <img src="/top_student.png" alt="Top Student" className={styles.bgImg} />
         <div className={styles.overlay} />
         <div className={styles.particles} ref={particlesRef} />
       </div>
